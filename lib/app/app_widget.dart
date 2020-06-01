@@ -5,7 +5,6 @@ import 'package:alice/style/Colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:alice/views/home.dart';
 import 'package:alice/views/login.dart';
-import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:provider/provider.dart';
 
 
@@ -66,7 +65,15 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     final controllerUser = Provider.of<ControllerUser>(context);
-    return MaterialApp(
+    return 
+    
+    MultiProvider(
+      providers: [
+        Provider<ControllerUser>(
+          create: (_) => ControllerUser(),
+        )
+      ],
+      child: MaterialApp(
           initialRoute: '/',
           routes: {
             /*'/':
@@ -92,6 +99,7 @@ class _AppState extends State<App> {
           theme: _buildAliceTheme(),
           debugShowCheckedModeBanner: false,
           title: "Alice",
-      );
+      ),
+    );
   }
 }
