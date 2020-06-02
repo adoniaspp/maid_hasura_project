@@ -1,10 +1,11 @@
 import 'package:alice/controller/controller_user.dart';
 import 'package:alice/model/usuario.dart';
 import 'package:alice/service/usuario_servico_graphql.dart';
-import 'package:alice/views/search_modal.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:animations/animations.dart';
+
+import 'components/search_modal.dart';
 
 class Home extends StatefulWidget {
   @override

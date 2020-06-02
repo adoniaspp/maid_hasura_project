@@ -1,8 +1,8 @@
+import 'package:hasura_connect/hasura_connect.dart';
+
 abstract class IClientHasura
 {
-  Future<int> mutationInsert(String mutationInsert, Future<Map<String, dynamic>> variables);
-  Future<int> mutationDelete(String mutationDelete, Future<Map<String, dynamic>> variables);
-  Future<int> mutationUpdate(String mutationUpdate, Future<Map<String, dynamic>> variables);
-  Future<Map<String, dynamic>> query(String query, {Future<Map<String, dynamic>> variables});
-  Future<Map<String, dynamic>> subscription(String subscription, {Future<Map<String, dynamic>> variables});
+  Future<int> mutation(String mutationInsert, Map<String, dynamic> variables);
+  Future<Map<String, dynamic>> query(String query, {Map<String, dynamic> variables});
+  Future<Snapshot> subscription(String subscription, {Map<String, dynamic> variables});
 }

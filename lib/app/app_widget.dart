@@ -1,10 +1,10 @@
+import 'package:alice/app/pages/create_user/create_user_page.dart';
+import 'package:alice/app/pages/home/home_page.dart';
+import 'package:alice/app/pages/login/login_page.dart';
 import 'package:alice/controller/controller_user.dart';
-import 'package:alice/views/create_user.dart';
 import 'package:flutter/material.dart';
 import 'package:alice/style/Colors.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:alice/views/home.dart';
-import 'package:alice/views/login.dart';
 import 'package:provider/provider.dart';
 
 
