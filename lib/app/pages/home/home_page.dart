@@ -1,6 +1,6 @@
 import 'package:alice/controller/controller_user.dart';
 import 'package:alice/model/usuario.dart';
-import 'package:alice/service/usuario_servico_graphql.dart';
+//import 'package:alice/service/usuario_servico_graphql.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:animations/animations.dart';
@@ -32,15 +32,6 @@ class _HomeState extends State<Home> {
       ),
       body: ListView(
         children: [
-          Center(
-            child: RaisedButton(
-              child: Text("Cadastrar"),
-              onPressed: (){
-              var now = new DateTime.now();
-              Usuario usuario = Usuario("Pedro Paulo", "paulo", now, "paulo@pp.com", "91988219977");
-              UsuarioServicoGraphql().criarUsuario(usuario);
-            }),
-          )
         ],
       ),
       floatingActionButton: OpenContainer(

@@ -1,4 +1,4 @@
-import 'package:alice/model/usuario.dart';
+/*import 'package:alice/model/usuario.dart';
 import 'package:alice/service/usuario_fachada.dart';
 import 'package:hasura_connect/hasura_connect.dart';
 
@@ -30,4 +30,4 @@ class UsuarioServicoGraphql implements UsuarioServico{
     //return r;   
   }
   
-} 
+} */
