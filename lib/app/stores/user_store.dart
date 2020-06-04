@@ -6,7 +6,7 @@ class UserStore = UserStoreBase with _$UserStore;
 
 abstract class UserStoreBase with Store {
 
-  //final IApi
+  final IApi
   
   @observable
   bool wait = false;
