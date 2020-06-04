@@ -1,5 +1,6 @@
-import 'package:alice/app/interfaces/client_hasura_interface.dart';
 import 'package:hasura_connect/hasura_connect.dart';
+
+import 'client_hasura_interface.dart';
 
 class ClientHasuraService implements IClientHasura 
 {
