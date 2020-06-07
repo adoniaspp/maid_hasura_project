@@ -17,7 +17,7 @@ class UserService implements IUserService
 }
     """;
         var response = await hasuraConnect.mutation(mutationInsert, variables: data);
-        return response;
+        return response['data']['insert_usuario']['returning'][0]['id_usuario'];
     }
     
     @override

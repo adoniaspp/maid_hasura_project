@@ -9,9 +9,9 @@ class ApiUserRepository implements IApiUserRepository
   ApiUserRepository(this.userService);
 
   @override
-  Future<int> createUser(Map<String, dynamic> data) {
+  Future<int> createUser(Map<String, dynamic> data) async{
     //tratar os dados.
-    var response = userService.createUser(data);
+    var response = await userService.createUser(data);
     return response;
   }
 }

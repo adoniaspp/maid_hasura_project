@@ -50,7 +50,6 @@ class _CreateUserState extends State<CreateUser> {
                 Container(
                   margin: EdgeInsets.only(bottom: 20),
                   child: TextFormField(
-                    obscureText: true,
                     controller: controllerEmail,
                     decoration: InputDecoration(
                       labelText: "E-mail",
@@ -61,7 +60,6 @@ class _CreateUserState extends State<CreateUser> {
                 Container(
                   margin: EdgeInsets.only(bottom: 20),
                   child: TextFormField(
-                    obscureText: true,
                     controller: controllerCelular,
                     decoration: InputDecoration(
                       labelText: "Numero do Celular",
@@ -72,7 +70,6 @@ class _CreateUserState extends State<CreateUser> {
                 Container(
                   margin: EdgeInsets.only(bottom: 20),
                   child: TextFormField(
-                    obscureText: true,
                     controller: controllerDataNascimento,
                     decoration: InputDecoration(
                       labelText: "Data de Nascimento",
@@ -124,7 +121,7 @@ class _CreateUserState extends State<CreateUser> {
                           //'senha': controllerSenha.value.text,
                           //'confirmacaoSenha': controllerConfSenha.value.text
                         }})
-                        .then((value) => null)
+                        .then((value) => print(value))
                         .catchError((e) {});
                     /*controllerUser
                                 .createUser(controllerUsername.text,
