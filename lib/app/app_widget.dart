@@ -1,6 +1,9 @@
 import 'package:alice/app/pages/create_user/create_user_page.dart';
 import 'package:alice/app/pages/home/home_page.dart';
 import 'package:alice/app/pages/login/login_page.dart';
+import 'package:alice/app/repositories/api_user_repository.dart';
+import 'package:alice/app/services/user_service.dart';
+import 'package:alice/app/stores/user_store.dart';
 //import 'package:alice/controller/controller_user.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -17,13 +20,13 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     //final controllerUser = Provider.of<ControllerUser>(context);
     return 
-/*    MultiProvider(
+    MultiProvider(
       providers: [
-        Provider<ControllerUser>(
-          create: (_) => ControllerUser(),
+        Provider<UserStore>(
+          create: (_) => UserStore(ApiUserRepository(UserService())),
         )
-      ],*/
-      //child: 
+      ],
+      child: 
       MaterialApp(
           initialRoute: '/',
           routes: {
@@ -49,7 +52,7 @@ class _AppState extends State<App> {
           },
           debugShowCheckedModeBanner: false,
           title: "Alice",
-      //),
+      ),
     );
   }
 }

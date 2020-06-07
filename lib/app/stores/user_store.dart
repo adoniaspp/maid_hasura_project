@@ -14,8 +14,9 @@ abstract class UserStoreBase with Store {
   @observable
   bool wait = false;
   
-  Future<int> createUser(Map<String, dynamic> userData)
+  Future<int> createUser(Map<String, dynamic> data)
   {
-    return apiUserRepository.createUser(userData);
+    //alterar o model
+    return apiUserRepository.createUser(data);
   }
 }
